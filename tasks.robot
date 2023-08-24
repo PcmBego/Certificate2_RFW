@@ -16,7 +16,7 @@ Library             RPA.RobotLogListener
 
 
 *** Variables ***
-${GLOBAL_RETRY_AMOUNT}=         5x
+${GLOBAL_RETRY_AMOUNT}=         10x
 ${GLOBAL_RETRY_INTERVAL}=       0.5s
 
 
