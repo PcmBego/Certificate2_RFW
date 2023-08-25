@@ -13,6 +13,8 @@ Library             RPA.PDF
 Library             RPA.FileSystem
 Library             RPA.Archive
 Library             RPA.RobotLogListener
+Library             RPA.Assistant
+Library             OperatingSystem
 
 
 *** Variables ***
@@ -23,7 +25,8 @@ ${GLOBAL_RETRY_INTERVAL}=       0.5s
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
     # Mute Run On Failure    Open the robot order website
-    Open the robot order website
+    ${input_url}=    User Input task
+    Open the robot order website    ${input_url}
     ${orders}=    Get orders
     FOR    ${row}    IN    @{orders}
         # Go To    https://robotsparebinindustries.com/#/robot-order
@@ -39,8 +42,9 @@ Order robots from RobotSpareBin Industries Inc
 
 *** Keywords ***
 Open the robot order website
+    [Arguments]    ${URL}
     # // ToDo: Implement your keyword here
-    ${URL}=    Set Variable    https://robotsparebinindustries.com/#/robot-order
+    # ${URL}=    Set Variable    https://robotsparebinindustries.com/#/robot-order
     Open Available Browser    ${URL}
 
 Download the orders file
@@ -118,7 +122,7 @@ Embed the robot screenshot to the receipt PDF file
     # Open Pdf    ${pdf}
     # Ensure a unique name
     ${file_name}=    Set Variable    0${order_number}_result.pdf
-    Create Directory    ${OUTPUT_DIR}${/}result
+    RPA.FileSystem.Create Directory    ${OUTPUT_DIR}${/}result
     ${file_path}=    Set Variable    ${OUTPUT_DIR}${/}result${/}${file_name}
     # ! ValueError: Argument 'files' got value
     # Add Files To Pdf    @{files}    ${file_path} -> 에러 발생
@@ -139,7 +143,7 @@ Embed the robot screenshot to the receipt PDF file Copy
     ...    ${screenshot}
     # Ensure a unique name
     ${file_name}=    Set Variable    0${order_number}_result.pdf
-    Create Directory    ${OUTPUT_DIR}${/}result
+    RPA.FileSystem.Create Directory    ${OUTPUT_DIR}${/}result
     ${file_path}=    Set Variable    ${OUTPUT_DIR}${/}result${/}${file_name}
     # ! ValueError: Argument 'files' got value
     # Add Files To Pdf    @{files}    ${file_path} -> 에러 발생
@@ -160,3 +164,18 @@ Close RobotSpareBin Browser
 
 Test keyword
     Fail    This keyword will fail
+
+User Input task
+    [Documentation]
+    ...    사용자 인풋을 위한 Task
+    Add Heading    Input from User    size=Large
+    ${ex_url}=    Set Variable    https://robotsparebinindustries.com/#/robot-order
+    Add Heading    ${ex_url}    size=Small
+    Add Text Input    text_input    Please enter URL
+    Add Submit Buttons    buttons=Submit,Cancel    default=Submit
+    ${result}=    Run Dialog
+
+    ${url}=    Set Variable    ${result}[text_input]
+    Log To Console    ${url}
+
+    RETURN    ${url}

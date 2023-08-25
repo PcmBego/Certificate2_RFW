@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230825 11:33:59.187" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\min88\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:34:16.699" endtime="20230825 11:34:16.699"/>
+</kw>
+<kw name="Add Text Input" library="RPA.Assistant">
+<arg>text_input</arg>
+<arg>Please enter URL</arg>
+<tag>input</tag>
+<doc>Add a text input element</doc>
+<status status="PASS" starttime="20230825 11:34:16.699" endtime="20230825 11:34:16.700"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="PASS" starttime="20230825 11:34:16.700" endtime="20230825 11:34:16.701"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="FAIL" starttime="20230825 11:34:16.701" endtime="20230825 11:34:16.704"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${url}</var>
+<arg>${result}[text_input]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230825 11:34:16.704" endtime="20230825 11:34:16.704"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230825 11:34:16.704" endtime="20230825 11:34:16.705"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:34:16.698" endtime="20230825 11:34:16.705"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:34:30.352" endtime="20230825 11:34:30.352"/>
+</kw>
+<kw name="Add Text Input" library="RPA.Assistant">
+<arg>text_input</arg>
+<arg>Please enter URL</arg>
+<tag>input</tag>
+<doc>Add a text input element</doc>
+<msg timestamp="20230825 11:34:30.353" level="FAIL">ValueError: Name `text_input` already in use</msg>
+<status status="FAIL" starttime="20230825 11:34:30.353" endtime="20230825 11:34:30.354"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="NOT RUN" starttime="20230825 11:34:30.354" endtime="20230825 11:34:30.354"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="NOT RUN" starttime="20230825 11:34:30.354" endtime="20230825 11:34:30.354"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${url}</var>
+<arg>${result}[text_input]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230825 11:34:30.355" endtime="20230825 11:34:30.355"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230825 11:34:30.355" endtime="20230825 11:34:30.355"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:34:30.352" endtime="20230825 11:34:30.355"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:35:10.605" endtime="20230825 11:35:10.606"/>
+</kw>
+<kw name="Add Text Input" library="RPA.Assistant">
+<arg>text_input</arg>
+<arg>Please enter URL</arg>
+<tag>input</tag>
+<doc>Add a text input element</doc>
+<msg timestamp="20230825 11:35:10.607" level="FAIL">ValueError: Name `text_input` already in use</msg>
+<status status="FAIL" starttime="20230825 11:35:10.606" endtime="20230825 11:35:10.607"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="NOT RUN" starttime="20230825 11:35:10.608" endtime="20230825 11:35:10.608"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="NOT RUN" starttime="20230825 11:35:10.608" endtime="20230825 11:35:10.609"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:35:10.605" endtime="20230825 11:35:10.609"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:35:31.188" endtime="20230825 11:35:31.188"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="PASS" starttime="20230825 11:35:31.188" endtime="20230825 11:35:31.189"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="FAIL" starttime="20230825 11:35:31.190" endtime="20230825 11:35:31.191"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:35:31.187" endtime="20230825 11:35:31.191"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:35:36.067" endtime="20230825 11:35:36.067"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="PASS" starttime="20230825 11:35:36.068" endtime="20230825 11:35:36.068"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="FAIL" starttime="20230825 11:35:36.068" endtime="20230825 11:35:36.071"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:35:36.066" endtime="20230825 11:35:36.071"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:35:38.779" endtime="20230825 11:35:38.779"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="PASS" starttime="20230825 11:35:38.779" endtime="20230825 11:35:38.780"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="FAIL" starttime="20230825 11:35:38.780" endtime="20230825 11:35:38.781"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:35:38.778" endtime="20230825 11:35:38.781"/>
+</kw>
+<kw name="User Input task">
+<doc>사용자 인풋을 위한 Task</doc>
+<kw name="Add Heading" library="RPA.Assistant">
+<arg>Input from User</arg>
+<doc>Add a centered heading text element</doc>
+<status status="PASS" starttime="20230825 11:39:33.910" endtime="20230825 11:39:33.911"/>
+</kw>
+<kw name="Add Submit Buttons" library="RPA.Assistant">
+<arg>buttons=Submit,Cancel</arg>
+<arg>default=Submit</arg>
+<tag>input</tag>
+<doc>Add custom submit buttons</doc>
+<status status="PASS" starttime="20230825 11:39:33.911" endtime="20230825 11:39:33.913"/>
+</kw>
+<kw name="Run Dialog" library="RPA.Assistant">
+<var>${result}</var>
+<tag>dialog</tag>
+<doc>Create a dialog from all the defined elements and block
+until the user has handled it.</doc>
+<status status="FAIL" starttime="20230825 11:39:33.913" endtime="20230825 11:39:33.915"/>
+</kw>
+<status status="FAIL" starttime="20230825 11:39:33.909" endtime="20230825 11:39:33.915"/>
+</kw>
+<status status="PASS" starttime="20230825 11:33:59.222" endtime="20230825 11:53:03.392"/>
+</kw>
+<status status="PASS" starttime="20230825 11:33:59.222" endtime="20230825 11:53:03.394"/>
+</test>
+<status status="PASS" starttime="20230825 11:33:59.189" endtime="20230825 11:53:03.395"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
