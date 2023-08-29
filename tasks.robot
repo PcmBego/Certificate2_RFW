@@ -52,7 +52,9 @@ Download the orders file
     Download    ${DOWNLOAD_URL}    target_file=${OUTPUT_DIR}    overwrite=${True}
 
 Get orders
-    [Documentation]    Download the orders file, read it as a table, and return the result
+    [Documentation]    - Download the orders file,
+    ...    - read it as a table,
+    ...    - and return the result
     Download the orders file
 
     # * Read CSV as a table and return the result
@@ -106,7 +108,7 @@ Store the order receipt as a PDF file
     # Ensure a unique name
     ${file_name}=    Set Variable    0${order_number}_order_receipt.pdf
     ${file_path}=    Set Variable    ${OUTPUT_DIR}${/}order_receipt${/}${file_name}
-    Html To Pdf    ${order_receipt_html}    ${file_path}    # make automatically "robot_preview_image" dir
+    Html To Pdf    ${order_receipt_html}    ${file_path}    # make automatically "order_receipt" dir
     RETURN    ${file_path}
 
 Take a screenshot of the robot
